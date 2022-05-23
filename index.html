@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Geladon</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <div class="Home">
+      <nav>
+
+          <img src="assets/logo.svg">
+
+        <ul>
+          <li class="button-modal-create">
+              <span onclick="abrirModal()">
+                Cadastrar Paleta
+              </span>
+          </li>
+      </ul>
+      </nav>
+
+      <div class="Home__header Header">
+        <div class="row">
+
+          <div class="Header__opcoes Opcoes">
+          </div>
+        </div>
+      </div>
+
+        <h2 >Pesquisar Paleta</h2>
+        <div class="paleta-ecolhida-spaco">
+          <input type="text" id="idPaleta" placeholder="Digite o id da paleta escolhida">
+          <button id="idPaletaButton" onclick="findOnePaleta()">Pesquisar</button>
+        </div>
+
+        <div id="paletaEscolhida">
+
+        </div>
+
+      <section class="modal-overlay" id="overlay">
+
+          <div class="modal">
+
+              <div class="modal-header">
+                  <h2 id="header-modal">Cadastrar uma paleta</h2>
+                  <a onclick="fecharModalCadastro()" class="close-modal">x</a>
+              </div>
+
+              <div class="modal-body">
+                  <div>
+                      <input type="text" name="sabor" id="sabor" placeholder="Sabor da Paleta">
+                      <input type="number" name="preco" id="preco" placeholder="Preço da Paleta">
+                      <textarea type="text" name="descricao" id="descricao" placeholder="Descrição da Paleta"
+                          rows="5"></textarea>
+                      <input type="text" name="foto" id="foto" placeholder="Link da Foto da Paleta">
+                      <button onclick="createPaleta()">Cadastrar</button>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+
+        <h2>Paletas Disponíveis:</h2>
+        <div class="Home__container">
+          <div class="PaletaLista" id="paletaList">
+
+          </div>
+        </div>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>
